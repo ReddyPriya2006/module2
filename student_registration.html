@@ -1,0 +1,96 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .form {
+            background-color: white;
+            width: 350px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form">
+        <h2>Student Registration</h2>
+
+        <input type="text" id="name" placeholder="Student Name">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <input type="number" id="age" placeholder="Age">
+
+        <select id="course">
+            <option value="">Select Course</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>B.Sc</option>
+            <option>MCA</option>
+        </select>
+
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <button onclick="register()">Register</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function register() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+            let course = document.getElementById("course").value;
+            let phone = document.getElementById("phone").value;
+
+            if (name == "" || email == "" || age == "" ||
+                course == "" || phone == "") {
+
+                document.getElementById("message").style.color = "red";
+                document.getElementById("message").innerHTML =
+                    "Please fill all fields";
+            }
+            else {
+                document.getElementById("message").style.color = "green";
+                document.getElementById("message").innerHTML =
+                    "Registration Successful!";
+            }
+        }
+    </script>
+
+</body>
+</html>
+```

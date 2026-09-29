@@ -1,0 +1,77 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .login {
+            background-color: white;
+            width: 300px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login">
+        <h2>Login</h2>
+
+        <input type="text" id="username" placeholder="Enter Username">
+
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function login() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (username == "" || password == "") {
+                document.getElementById("message").innerHTML =
+                    "Please enter username and password";
+            }
+            else {
+                document.getElementById("message").innerHTML =
+                    "Login Successful!";
+                document.getElementById("message").style.color = "green";
+            }
+        }
+    </script>
+
+</body>
+</html>
+```
